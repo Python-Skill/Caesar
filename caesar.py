@@ -1,3 +1,4 @@
+import pyperclip
 from numpy import iinfo
 
 print("Шифр Цезаря")
@@ -15,7 +16,7 @@ if a == "1":
     d = 0
     for c in mess:
             d += 1
-
+    mess.lower()
     alf = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
     i = 0
     result = ""
@@ -27,6 +28,27 @@ if a == "1":
         result += bstr
     print("Результат:")
     print(result)
+    pyperclip.copy(result)
     print("Зашифровнное предложение скопированно в буфер обмена!")
-#else:
-    #print("Введите сообщение,которое нужно необходимо расшифровать:")
+
+elif a == "2":
+    print("Введите сообщение,которое нужно необходимо расшифровать:")
+    mess = input(">")
+    #Цикл подсчета букв в предложение 
+    d = 0
+    for c in mess:
+            d += 1
+
+    alf = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+    i = 0
+    result = ""
+    while i < d:
+        nstr = alf.find(mess[i])
+        mstr = nstr - int(b)
+        bstr = alf[mstr]
+        i += 1
+        result += bstr
+    print("Результат:")
+    print(result)
+    pyperclip.copy(result)
+    print("Зашифровнное предложение скопированно в буфер обмена!")
