@@ -23,6 +23,8 @@ if a == "1":
     while i < d:
         nstr = alf.find(mess[i])
         mstr = nstr + int(b)
+        if mstr > 32:
+            mstr = 0
         bstr = alf[mstr]
         i += 1
         result += bstr
