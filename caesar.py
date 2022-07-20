@@ -1,5 +1,4 @@
 import pyperclip
-from numpy import iinfo
 
 print("Шифр Цезаря")
 
